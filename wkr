@@ -1,0 +1,26 @@
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+    
+
+    const targetHost = "https://stargateedge.com/api/";  
+    const targetUrl = `https://${targetHost}${url.pathname}`;
+
+
+    const modifiedRequest = new Request(targetUrl, {
+      method: request.method,
+      headers: request.headers,
+      body: request.body,
+      redirect: "follow"
+    });
+
+
+    const response = await fetch(modifiedRequest);
+
+
+    return new Response(response.body, {
+      status: response.status,
+      headers: response.headers
+    });
+  }
+};
