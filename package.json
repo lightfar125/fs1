@@ -1,0 +1,12 @@
+{
+  "name": "fs1",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "wrangler": "^4.7.0"
+  },
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish"
+  }
+}
