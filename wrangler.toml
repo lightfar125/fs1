@@ -19,8 +19,8 @@ CACHE_TTL = 3600
 
 
 [[services]]
-binding = "REMOTE_API"
-service = "your-other-worker-service"
+binding = "https://stargateedge.com/api"
+service = "fs1"
 
 # Route 绑定（可选，使用自己的域名）
 # routes = ["remote-boost.yourdomain.com/*"]
