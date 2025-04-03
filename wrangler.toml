@@ -1,6 +1,6 @@
 name = "fs1"
 type = "javascript"  # "webpack" "service-worker"
-account_id = "kuangyen.khor@singtel.com"
+account_id = "cd3e58766ea92897c4e633b4d7ee0380"
 workers_dev = true  
 compatibility_date = "2025-04-03"
 
