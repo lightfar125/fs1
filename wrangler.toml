@@ -1,0 +1,26 @@
+name = "fs1"
+type = "javascript"  # "webpack" "service-worker"
+account_id = "kuangyen.khor@singtel.com"
+workers_dev = true  
+compatibility_date = "2025-04-03"
+
+
+main = "src/index.js"
+
+
+#[[kv_namespaces]]
+#binding = "CACHE_STORAGE"
+#id = "your-kv-namespace-id"
+
+
+[vars]
+API_URL = "https://stargateedge.com/api"
+CACHE_TTL = 3600  
+
+
+[[services]]
+binding = "REMOTE_API"
+service = "your-other-worker-service"
+
+# Route 绑定（可选，使用自己的域名）
+# routes = ["remote-boost.yourdomain.com/*"]
